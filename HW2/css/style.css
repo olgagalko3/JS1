@@ -1,0 +1,127 @@
+ *{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin-top: 30px;
+  margin-left: 184px;
+  margin-right: 184px;
+ 
+}
+
+.header{
+   display: inline flex;
+   justify-content: space-between;
+   align-items: center;
+   font-family: "DM Sans", sans-serif;
+   font-weight: 700;
+   font-size: 15px;
+   width: 1069px;
+   height: 60px
+}
+.menu__link{
+   padding-left: 20px;
+   text-decoration: none;
+   font-size: 15px;
+   font-weight: 700;
+   font: "DM Sans", sans-serif;
+   color: #696871;
+}
+.menu__link__active{
+   text-decoration: none;
+   font-size: 15px;
+   font-weight: 700;
+   font: "DM Sans", sans-serif;
+   color: #19191b;
+   border-bottom: 2px solid #5454d4;
+
+}
+.menu__block{
+   display: inline flex;
+   justify-content: space-between;
+   align-items: center;
+   
+}
+.menu_link{
+   list-style-type: none;
+   display: flex;
+   position:relative;
+   align-content:space-between;
+
+}
+.menu__button{
+   display: flex;
+   justify-content: flex-end;
+   text-decoration: none;
+   background-color: #FF7143;
+   height: 60px;
+   width: 211px;
+   border: none;
+   border-radius: 10px;
+   padding: 20px 60px;
+ 
+   text-align: center;
+   font-size: 17px;
+   font-family: "DM Sans", sans-serif;
+   font-weight: 700;
+}
+
+.main{
+   display: inline flex;
+   margin-top: 0;
+   justify-content: space-between;
+   align-items: center;
+   height: 644px;
+   width: 1146px;
+
+}
+.main__heading{
+ 
+   height: 231px;
+   width: 462px;
+   
+}
+.main__h1{
+   margin: 0;
+   font-family: "DM Sans", sans-serif;
+   font-weight: 700;
+   font-size: 80px;
+   line-height: 77px;
+}
+.main__text{
+   margin:10px;
+   height: 90px;
+   width: 459px;
+   font-family: "Mulish", sans-serif;
+   font-weight: 400;
+   font-size: 20px;
+   line-height: 30px;
+   font-style: normal;
+   color: #696871;
+}
+.main__picture{
+   display: flex;
+   padding-top: 100px;
+   width: 580px;
+   height: 644px;
+
+}
+
+button{ 
+   display: inline-block;
+   background-color: #5454D4;
+   border: none;
+   border-radius: 10px;
+   padding: 20px 60px;
+   text-align: center;
+   text-decoration: none;
+   font-size: 17px;
+   font-family: "DM Sans", sans-serif;
+   font-weight: 700;
+   line-height: 20px;
+}
+.main__arrow{
+   display: inline-block;
+   margin-top: 10px;
+}
