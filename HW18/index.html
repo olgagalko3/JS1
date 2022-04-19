@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>HW18</title>
+</head>
+
+<body>
+
+   <h1>HW18</h1>
+
+   <script>
+
+      // ### NORMAL level
+
+      // #### Task 1 🖥
+
+      // Дан массив:
+
+      //    ```javascript
+      //     const colors = ['red', 'green', 'blue']
+      // ```
+
+
+      const colors = ['red', 'green', 'blue']
+      console.log(colors.length)
+
+      // Выведите в консоль его длину.
+
+      // #### Task 2 🖥
+
+      // Дан массив:
+
+      //    ```javascript
+      //     const animals = ['monkey', 'dog', 'cat']
+      // ```
+      // Выведите в консоль его последний элемент вне зависимости от его длинны.
+
+      const animals = ['monkey', 'dog', 'cat']
+      const letterArray = [];
+      animals.forEach(function (letter) {
+
+         const lastletter = letter[letter.length - 1]
+         letterArray.push(lastletter)
+         return console.log(lastletter);
+
+      }
+      )
+
+
+      //    #### Task 3 🖥
+
+      //    Дан массив:
+
+      //       ```javascript
+      //  const numbers = [5, 43, 63, 23, 90]
+      // ```
+
+      // Удалите все элементы в массиве и выведите в консоль полученный результат.
+
+      // > Реализуйте решение двумя способами.
+
+
+      const numbers = [5, 43, 63, 23, 90]
+
+      let removed = numbers.splice(0, 1, 2, 3, 4)
+
+      console.log(removed)
+
+
+      //       #### Task 4 🖥
+
+      // Дан массив:
+
+      //          ```javascript
+      //     const students = ['Polina', 'Dasha', 'Masha']
+      // ```
+
+      //             + Удалите последний элемент массива, затем вместо него добавьте в массив студента`Borya`.
+      //             + Удалите первый элемент массива, затем вместо него добавьте в массив студента`Andrey`.
+      //             + Полученный результат не забудьте вывести в консоль.
+
+      const students = ['Polina', 'Dasha', 'Masha']
+
+      // let popped = students.pop();
+
+      students.pop()
+      console.log(students)
+
+
+
+      students.length--
+
+      console.log(students)
+
+      students.push('Borya')
+      console.log(students)
+
+      students.shift()
+      console.log(students)
+
+
+
+      students.unshift('Andrey')
+      console.log(students)
+
+      // #### Task 5 🖥
+
+      // Дан массив:
+
+      //    ```javascript
+      // const cats = ['Gachito', 'Tom', 'Batman']
+      // ```
+
+      // Выведите в консоль все элементы массива.Сначала через цикл ** `for` **, затем ** `for of` **.
+
+      const cats = ['Gachito', 'Tom', 'Batman']
+      for (let i = 0; i < cats.length; i++) {
+
+
+         console.log(cats[i]);
+      }
+
+      for (let number of cats) {
+         console.log(number);
+      }
+
+
+
+
+      //       #### Task 6 🖥
+
+      //          ```javascript
+      //     const evenNumbers = [2, 4, 6, 8, 10]
+      //     const oddNumbers = [1, 3, 5, 7, 9]
+      // ```
+
+      //             + Соедините два массива чисел в один.
+      // + В полученном массиве попробуйте найти индекс числа ** `8` **
+
+      const evenNumbers = [2, 4, 6, 8, 10]
+      const oddNumbers = [1, 3, 5, 7, 9]
+
+      const joinedNumbers = evenNumbers.concat(oddNumbers);
+
+      console.log(joinedNumbers)
+
+      console.log(joinedNumbers.indexOf(8));
+
+
+
+
+
+
+
+
+
+
+
+
+      // #### Task 7 🖥
+
+      // Дан массив:
+
+      //          ```javascript
+      //     const binary = [0, 0, 0, 0]
+      // ```
+
+      //             + Наш бинарный массив неполный, в нем явно не хватает единиц.
+      // + Превратите данный массив в строку.
+
+      // > [0, 0, 0, 0] -> '0101010'
+
+      const binary = [0, 0, 0, 0]
+
+      const binaryNew = binary.join('1');
+
+      console.log(binaryNew)
+
+
+      //       #### Task 1 👨‍🏫
+
+      // Реализуйте функцию которая будет проверять, является ли слово палиндромом.
+
+
+      str = 'anna'
+
+      function palindrom(str) {
+         let j = str.length - 1;
+         // return str == str.split('').reverse('').join('');
+         for (let i = 0; i < str.length; i++, j--) {
+            if (str[i] != str[j]) {
+               return false;
+            }
+         }
+         return true
+      }
+
+      console.log(palindrom(str))
+
+
+
+      // #### Task 2 👨‍🏫
+
+      //          ```javascript
+      //     const matrix = [
+      //         [12, 98, 78, 65, 23],
+      //         [54, 76, 98, 43, 65],
+      //         [13, 324, 65, 312],
+      //         [9092, 22, 45, 90000],
+      //     ]
+      // ```
+
+      //             > Выведите в консоль среднее значение чисел в многомерном массиве.
+
+
+      const matrix = [
+         [12, 98, 78, 65, 23],
+         [54, 76, 98, 43, 65],
+         [13, 324, 65, 312],
+         [9092, 22, 45, 90000],
+      ]
+
+      //Var1
+      let matrixNew = matrix.flat()
+
+      console.log(matrixNew)
+
+
+
+      let result = matrixNew.reduce(function (sum, elem) {
+         return sum + elem;
+
+      }, 0);
+      let average = result / matrixNew.length
+      console.log(average);
+
+      //Var 2
+      // let matrixLength = matrix.flat().length
+      // {
+
+      //    let sum = 0
+      //    for (let i = 0; i < matrix.length; i++) {
+      //       for (let j = 0; j < matrix[i].length; j++) {
+      //          sum += matrix[i][j];
+
+
+
+
+
+
+      //       }
+
+      //       console.log(sum)
+      //    }
+
+
+      //    let sumAverage = sum / matrixLength
+      //    console.log(sumAverage)
+      // }
+
+
+
+      // #### Task 3 👨‍🏫
+
+      // Дан массив:
+
+      //    ```javascript
+      //    const mixedNumbers = [-14, 24, -89, 43, 0 , -1, 412, 4]
+      // ```
+
+      // Создайте два массива, в один поместите все положительные числа включая 0, в другой все отрицательные.Оба массива затем выведите в консоль. 
+
+      const mixedNumbers = [-14, 24, -89, 43, 0, -1, 412, 4]
+
+      const positive = mixedNumbers.filter(mixedNumbers => mixedNumbers >= 0);
+      const negative = mixedNumbers.filter(mixedNumbers => mixedNumbers < 0);
+
+
+      console.log(positive);
+      console.log(negative)
+
+
+      //       #### Task 4 👨‍🏫
+
+      // Создать массив длинной не менее 5, из динамически созданных случайных чисел.
+      // Далее написать алгоритм который берет все числа из исходного массива, возводит их в куб и записывает в новый массив.
+      // В конце вывести оба массива в консоль.
+
+
+      const arrRandom = [];
+
+      for (let i = 0; i < 5; i++) {
+         arrRandom.push((Math.round(Math.random() * 100)))
+      }
+
+      console.log(arrRandom)
+
+      var arrRandomCub = [];
+
+      for (let i = 0; i < arrRandom.length; i++) {
+         arrRandomCub.push(Math.pow(arrRandom[i], 3));
+      }
+      console.log(arrRandomCub);
+
+      // codewards1
+      // https://www.codewars.com/kata/57f781872e3d8ca2a000007e
+      // Given an array of integers, return a new array with each value doubled.
+
+      // For example:
+
+      // [1, 2, 3]-- > [2, 4, 6]
+
+
+      let arrGiven = [1, 2, 3, 15, 48]
+
+
+      //var 1
+      // arrGivenS = [];
+
+      // for (let i = 0; i < arrGiven.length; i++) {
+      //    arrGivenS.push(arrGiven[i] * 2)
+      // }
+
+      // console.log(arrGivenS)
+
+      //var 2
+      let resultArr = arrGiven.map(function (elem) {
+         return elem * 2;
+      }
+      )
+      console.log(resultArr)
+
+
+      //codewards2
+      // https://www.codewars.com/kata/5715eaedb436cf5606000381
+
+      //  You get an array of numbers, return the sum of all of the positives ones.
+
+      //       Example[1, -4, 7, 12] => 1 + 7 + 12 = 20
+
+      //    Note: if there is nothing to sum, the sum is default to 0.
+
+
+
+      let array = [-4, 7, 12, -4, 45]
+
+      let newArray = array.filter(function (elem) {
+
+
+         return elem > 0
+      }
+      );
+
+      console.log(newArray);
+
+      let resultSum = newArray.reduce(function (sum, elem) {
+         return sum + elem;
+
+      }, 0);
+
+      console.log(resultSum)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   </script>
+</body>
+
+</html>
